@@ -16,8 +16,8 @@
 
 
 
-### ---------------------------------------------------------------------- EXPERIMENT 1
-from model import diffdiag_prompt, diagnosis_report_writer, questions_prompt, patient_instructor
+# ### ---------------------------------------------------------------------- EXPERIMENT 1
+# from model import diffdiag_prompt, diagnosis_report_writer, questions_prompt, patient_instructor
 
 # transcript = """
 # Patient: “I've been taking the Glycomet-GP 1 as you prescribed, doctor, but I'm still feeling quite unwell. My blood pressure readings are all over the place and my sugar levels are high.”
@@ -103,23 +103,23 @@ from model import diffdiag_prompt, diagnosis_report_writer, questions_prompt, pa
 
 ### ---------------------------------------------------------------------- EXPERIMENT 3
 
-# from utils import recognizer, get_mic_index, microphone
-# import speech_recognition as sr
-# # from pydub import AudioSegment
-# from dotenv import load_dotenv
-# import pyaudio
+from utils import recognizer, get_mic_index, microphone
+import speech_recognition as sr
+# from pydub import AudioSegment
+from dotenv import load_dotenv
+import pyaudio
 
-# load_dotenv()
-
-
-# def process_audio(recognizer, audio):
-#     text = recognizer.recognize_whisper_api(audio)
-#     print("[whisper] transcript: ", text)
+load_dotenv()
 
 
-# # List available microphones (optional)
-# # for index, name in enumerate(sr.Microphone.list_microphone_names()):
-# #     print(f"Microphone {index}: {name}")
+def process_audio(recognizer, audio):
+    text = recognizer.recognize_whisper_api(audio)
+    print("[whisper] transcript: ", text)
+
+
+# List available microphones (optional)
+for index, name in enumerate(sr.Microphone.list_microphone_names()):
+    print(f"Microphone {index}: {name}")
 
 # # Use the microphone to capture audio input
 # with microphone as source:
@@ -128,21 +128,21 @@ from model import diffdiag_prompt, diagnosis_report_writer, questions_prompt, pa
 
 # process_audio(recognizer, audio)
 
-import sys
-sys.path.append('./medical_assistant')
+# import sys
+# sys.path.append('./medical_assistant')
 
-from medical_assistant import medical_assistant
-from state import state_store
+# from medical_assistant import medical_assistant
+# from state import state_store
 
 
-text = "What are the side effects of panadol?"
+# text = "What are the side effects of panadol?"
 
-ai_response = medical_assistant.agent_executor.run(
-    {
-        "input": text,
-   })
+# ai_response = medical_assistant.agent_executor.run(
+#     {
+#         "input": text,
+#    })
 
-print(f"AI response: {ai_response}")
+# print(f"AI response: {ai_response}")
 
 
 

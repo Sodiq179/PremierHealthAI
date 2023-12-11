@@ -29,14 +29,14 @@ tools = [
         name = "Search drugs.com",
         func=duck_wrapper_drugs,
         description="useful for when you need to answer medication questions"
-    ),
+    )]
 
-    Tool(
-        name = "Search webmd.com",
-        func=duck_wrapper_webmd,
-        description="useful for when you need to answer medication questions"
-    )
-]
+#     Tool(
+#         name = "Search webmd.com",
+#         func=duck_wrapper_webmd,
+#         description="useful for when you need to answer medication questions"
+#     )
+# ]
     
 
 

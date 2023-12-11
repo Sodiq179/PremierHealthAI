@@ -107,7 +107,7 @@ The consultation snippets are as follows:
 
 diffdiag_template = """##DDX model
 Based on the provided transcript snippets from a pharmacist-patient consultation, parse the information to generate a differential diagnosis. The results should be organized as follows:
-Differential Diagnosis: List withut explaining the top three possible diagnosis with a model confidence score from 0-100 (example: (30)), 100 being most confident or return this, 'The information provided is not enough for diagnosis', if the transcript snippets is not enough for a differential diagnosis.
+Differential Diagnosis: List withut explaining the top three possible diagnosis with a model confidence score from 0-100 (example: (30)), 100 being most confident 
 Please consider the patient's stated symptoms, their medical history, and any other relevant information presented in the transcript. The consultation snippets are as follows:
 
 {transcript}
